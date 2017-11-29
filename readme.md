@@ -40,8 +40,9 @@ Then, install RabbitMQ and an extension, depends on your Linux distribution, the
     sudo rabbitmq-plugins enable rabbitmq_web_stomp
 
 Finally, send text to a RabbitMQ queue:
-    - If you are using Neovim, there is a plugin you can use, [vim-senter](https://github.com/qwfy/vim-senter.git)
-    - If you are using this for other purposes, you can just send a message to the queue, (see Internals).
+
+- If you are using Neovim, there is a plugin you can use, [vim-senter](https://github.com/qwfy/vim-senter)
+- If you are using this for other purposes, you can just send a message to the queue, (see Internals).
 
 
 ## Internals
