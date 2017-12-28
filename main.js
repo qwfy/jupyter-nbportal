@@ -538,6 +538,7 @@ define([
         }
 
         var client = Stomp.over(ws);
+        client.debug = null;
 
         function on_connect() {
             id = client.subscribe("/queue/" + channel_name, on_rmq_msg,
