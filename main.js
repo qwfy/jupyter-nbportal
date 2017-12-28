@@ -522,13 +522,13 @@ define([
             cell.code_mirror.setValue(msg.data);
             cell.execute()
         } else {
-            console.log("unsupported message: " + msg.toString())
+            console.log("Unsupported message: " + msg.toString())
         }
     }
 
     function load_ipython_extension() {
         var channel_name = Jupyter.notebook.notebook_path.replace(/\//g, ";");
-        console.log('nbportal using queue: ' + channel_name);
+        console.log('Using queue: ' + channel_name);
         var ws = new WebSocket("ws://127.0.0.1:15674/ws");
 
         function on_rmq_msg(rmq_msg) {
@@ -546,11 +546,11 @@ define([
                  durable:false,
                  auto_delete:true,
                  ack: "client"});
-            console.log('rmq subscribed');
+            console.log('RMQ subscribed');
         };
 
         function on_error() {
-            console.log('rmq error');
+            console.log('RMQ error');
         };
 
         client.connect('guest', 'guest', on_connect, on_error, "/");
